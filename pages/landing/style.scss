@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: 0 90px 0 219px;
   width: 1920px;
-  max-height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +18,7 @@
   background: $main-bg-color;
 
   .wrapper {
+    max-height: 110px;
     box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.1);
     -webkit-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.1);
@@ -114,4 +114,14 @@
       color: $hover-color;
     }
   }
+}
+
+.hero {
+  min-width: 1920px;
+  height: 803px;
+  width: 100%;
+  position: relative;
+  top: 110px;
+  background: url(../../assets/bg/hero_bg.png) center bottom/cover repeat-x;
+  background-size: auto 100%;
 }
