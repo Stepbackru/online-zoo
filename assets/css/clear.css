@@ -24,6 +24,11 @@ button:hover {
   cursor: pointer;
 }
 
+button {
+  border: 0;
+  outline: 0;
+}
+
 ul {
   list-style-type: none;
 }
