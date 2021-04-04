@@ -1,1 +1,40 @@
-@import "../../assets/css/clear.scss";
+@import "../../assets/css/clear.scss", "../../assets/css/constants.scss";
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 90px 0 219px;
+  max-width: 1920px;
+  max-height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  padding: 15px 0;
+  width: 100%;
+  max-height: 140px;
+  position: absolute;
+  background: $main-bg-color;
+
+  .menu {
+    display: flex;
+
+    .logo {
+      max-width: 108px;
+      max-height: 84px;
+  
+      &__link {
+        width: 108px;
+        height: 84px;
+        display: block;
+        background: url(../../assets/icons/logo.svg) no-repeat;
+      }
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
