@@ -3,7 +3,7 @@
 .wrapper {
   margin: 0 auto;
   padding: 0 90px 0 219px;
-  max-width: 1920px;
+  width: 1920px;
   max-height: 110px;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@
 
 .header {
   padding: 15px 0;
+  min-width: 1920px;
   width: 100%;
   max-height: 140px;
   position: absolute;
@@ -60,16 +61,57 @@
         color: $hover-color;
       }
       &:active {
-        border-bottom: 2px solid $border-bottom-color;
+        border-bottom: 2px solid $border-color;
       }
     }
     &__link_active {
       color: $hover-color;
-      border-bottom: 2px solid $border-bottom-color;
+      border-bottom: 2px solid $border-color;
       
       &:hover {
         cursor: default;
       }
+    }
+  }
+  .auth {
+    display: flex;
+    align-items: center;
+
+    &__search {
+      margin-right: 34px;
+      width: 32px;
+      height: 32px;
+      background: url(../../assets/icons/search-icon.svg) no-repeat;
+      opacity: .7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &__input_search {
+      display: none;
+    }
+    &__login,
+    &__signup {
+      background: transparent;
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $text-color;
+    }
+    &__signup {
+      margin: 0 0 4px 17px;
+      padding: 16px 14px 15px;
+      border: 1px solid $border-color;
+      border-radius: 100px;
+      
+      &:hover {
+        border: 1px solid $hover-color;
+      }
+    }
+    &__btn:hover {
+      color: $hover-color;
     }
   }
 }

@@ -26,6 +26,11 @@ button:hover {
   cursor: pointer;
 }
 
+button {
+  border: 0;
+  outline: 0;
+}
+
 ul {
   list-style-type: none;
 }
@@ -43,7 +48,7 @@ ul {
 .wrapper {
   margin: 0 auto;
   padding: 0 90px 0 219px;
-  max-width: 1920px;
+  width: 1920px;
   max-height: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +63,7 @@ ul {
 
 .header {
   padding: 15px 0;
+  min-width: 1920px;
   width: 100%;
   max-height: 140px;
   position: absolute;
@@ -128,5 +134,54 @@ ul {
 
 .header .menu__link_active:hover {
   cursor: default;
+}
+
+.header .auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .auth__search {
+  margin-right: 34px;
+  width: 32px;
+  height: 32px;
+  background: url(../../assets/icons/search-icon.svg) no-repeat;
+  opacity: .7;
+}
+
+.header .auth__search:hover {
+  opacity: 1;
+}
+
+.header .auth__input_search {
+  display: none;
+}
+
+.header .auth__login, .header .auth__signup {
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #c5e1e5;
+}
+
+.header .auth__signup {
+  margin: 0 0 4px 17px;
+  padding: 16px 14px 15px;
+  border: 1px solid #c5e1e6;
+  border-radius: 100px;
+}
+
+.header .auth__signup:hover {
+  border: 1px solid #ffffff;
+}
+
+.header .auth__btn:hover {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
