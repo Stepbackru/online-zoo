@@ -46,6 +46,10 @@ ul {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.body {
+  background: #f6f9fa;
+}
+
 .wrapper {
   margin: 0 auto;
   padding: 0 90px 0 219px;
@@ -303,5 +307,41 @@ ul {
   width: 33px;
   height: 39px;
   background: url(../../assets/icons/play-icon.svg) no-repeat;
+}
+
+.how {
+  padding: 35px 0;
+  min-width: 1920px;
+  width: 100%;
+  height: 926px;
+}
+
+.how .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.how__caption {
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0d444d;
+  text-transform: uppercase;
+}
+
+.how__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.how__item {
+  max-width: 470px;
+  height: 200px;
 }
 /*# sourceMappingURL=style.css.map */
