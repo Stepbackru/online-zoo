@@ -500,12 +500,14 @@ ul {
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
   font-weight: 400;
+  color: #19707D;
   text-transform: uppercase;
   text-align: center;
   border: 1.5px solid #19707D;
   border-radius: 100px;
   line-height: 49px;
   letter-spacing: 1.8px;
+  opacity: .8;
 }
 
 .pets__link::before {
@@ -515,5 +517,11 @@ ul {
   position: absolute;
   top: 5px;
   left: 19px;
+}
+
+.pets__link:hover {
+  opacity: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 /*# sourceMappingURL=style.css.map */
