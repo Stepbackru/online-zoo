@@ -578,7 +578,7 @@ ul {
 }
 
 .pets .cards__pic {
-  margin: 20px auto 0;
+  margin: 20px auto 31px;
   width: 229px;
   height: 221px;
   position: relative;
@@ -634,5 +634,34 @@ ul {
 
 .pets .cards__image_lemur::before {
   background: url(../../assets/images/lemur.jpg) center/cover;
+}
+
+.pets .cards__content {
+  padding: 16px 31px;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  border-top: 1px solid #e5eaeb;
+}
+
+.pets .cards__content::after {
+  content: url(../../assets/icons/tv-icon.svg);
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 29px;
+  right: 29px;
+}
+
+.pets .cards__name {
+  padding-bottom: 6px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+.pets .cards__location {
+  font-size: 16px;
+  font-weight: 400;
+  color: #909090;
 }
 /*# sourceMappingURL=style.css.map */

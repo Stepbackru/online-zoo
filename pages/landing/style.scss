@@ -440,7 +440,7 @@
       }
     }
     &__pic {
-      margin: 20px auto 0;
+      margin: 20px auto 31px;
       width: 229px;
       height: 221px;
       position: relative;
@@ -483,6 +483,33 @@
     }
     &__image_lemur::before {
       background: url(../../assets/images/lemur.jpg) center / cover;
+    }
+    
+    &__content {
+      padding: 16px 31px;
+      position: relative;
+      font-family: 'Roboto', sans-serif;
+      border-top: 1px solid $cards-item-border-color;
+
+      &::after {
+        content: url(../../assets/icons/tv-icon.svg);
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 29px;
+        right: 29px;
+      }
+    }
+    &__name {
+      padding-bottom: 6px;
+      font-size: 24px;
+      font-weight: 500;
+      color: $cards-item-name-color;
+    }
+    &__location {
+      font-size: 16px;
+      font-weight: 400;
+      color: $cards-item-location-color;
     }
   }
 }
