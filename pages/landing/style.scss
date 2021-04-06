@@ -227,7 +227,8 @@
   width: 100%;
   max-height: 926px;
 
-  .wrapper {
+  &__content {
+    padding-bottom: 76px;
     flex-direction: column;
   }
 
@@ -285,12 +286,64 @@
     text-align: center;
   }
 
-  &__bg {
+  .how__bg {
     width: 100%;
     height: 523px;
-    position: relative;
     background: url(../../assets/bg/how_bg.png) center bottom/cover repeat-x;
     background-size: auto 100%;
+
+    .wrapper {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 1920px;
+      position: relative;
+    }
+    
+    &_bamboo {
+      position: absolute;
+      background: url(../../assets/icons/bamboo.svg) center center/cover no-repeat;
+    }
+    &_tree {
+      width: 130px;
+      height: 230px;
+      position: absolute;
+      background: url(../../assets/icons/tree.svg) center center/cover no-repeat;
+    }
+
+    &_bamboo-left {
+      width: 116px;
+      height: 221px;
+      top: 62px;
+      left: 1px;
+    }
+    &_tree-left {
+      top: 47px;
+      left: 221px;
+    }
+    &_tree-center {
+      width: 89px;
+      height: 158px;
+      top: 107px;
+      left: calc(50% - 165px);
+    }
+    &_panda {
+      width: 169px;
+      height: 155px;
+      position: absolute;
+      top: 205px;
+      left: calc(50% - 10px);
+      background: url(../../assets/icons/panda.svg) center center/cover no-repeat;
+    }
+    &_bamboo-center {
+      width: 147px;
+      height: 280px;
+      top: 93px;
+      left: calc(50% + 80px);
+    }
+    &_tree-right {
+      top: 163px;
+      right: 175px;
+    }
   }
 }
 
