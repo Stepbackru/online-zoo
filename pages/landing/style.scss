@@ -358,6 +358,7 @@
   }
 
   &__header {
+    padding-bottom: 66px;
     max-width: 1480px;
     display: flex;
     justify-content: space-between;
@@ -401,46 +402,87 @@
       transition: .3s;
     }
   }
+  .cards {
+    max-width: 1480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &__item {
+      width: 480px;
+      height: 364px;
+      background: $cards-item-bg-color;
+      box-shadow: 0px 2px 30px $cards-item-shadow;
+      border-radius: 10px;
+    }
+    &__link {
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      &:hover .cards__pic_panda, 
+      &:hover .cards__pic_eagle, 
+      &:hover .cards__pic_gorilla, 
+      &:hover .cards__pic_aligator, 
+      &:hover .cards__pic_elephant, 
+      &:hover .cards__pic_lemur {
+        transform: rotate(360deg);
+      }
+      &:hover .cards__image_panda::before,
+      &:hover .cards__image_eagle::before,
+      &:hover .cards__image_gorilla::before,
+      &:hover .cards__image_aligator::before,
+      &:hover .cards__image_elephant::before,
+      &:hover .cards__image_lemur::before {
+        transform: rotate(-360deg);
+      }
+    }
+    &__pic {
+      margin: 20px auto 0;
+      width: 229px;
+      height: 221px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 48% 52% 65% 35% / 43% 46% 54% 57%;
+      transition: transform .5s;
+    }
+    &__image {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: transform .5s;
+      }
+    }
+    &__image_panda::before {
+      background: url(../../assets/images/panda.jpg) center / cover;
+    }
+    &__image_eagle::before {
+      background: url(../../assets/images/eagle.jpg) center / cover;
+    }
+    &__image_gorilla::before {
+      background: url(../../assets/images/gorilla.jpg) center / cover;
+    }
+    &__image_aligator::before {
+      background: url(../../assets/images/crocodile.jpg) center / cover;
+    }
+    &__image_elephant::before {
+      background: url(../../assets/images/elephant.jpg) center / cover;
+    }
+    &__image_lemur::before {
+      background: url(../../assets/images/lemur.jpg) center / cover;
+    }
+  }
 }
-
-
-
-
-
-
-// Rotate Animation
-// .animal {
-//   width: 804px;
-//   height: 666px;
-//   display: block;
-//   position: relative;
-//   top: 52px;
-//   overflow: hidden;
-//   border-radius: 60% 40% 39% 61% / 62% 56% 44% 38%;
-//   transition: transform 2s;
-//   &__link {
-//     content: "";
-//     position: absolute;
-//     top: -10px;
-//     left: -10px;
-//     right: -10px;
-//     bottom: -10px;
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       right: 0;
-//       bottom: 0;
-//       background: url(../../assets/images/panda_hero.png); background-size: cover;
-//       transition: transform 2s;
-//     }
-//     &:hover::before {
-//       transform: rotate(-360deg);
-//     }
-//   }
-//   &:hover {
-//     transform: rotate(360deg);
-//   }
-// }
