@@ -347,7 +347,55 @@
   }
 }
 
+.pets {
+  padding-top: 106px;
+  min-width: 1920px;
+  width: 100%;
+  max-height: 867px;
 
+  .wrapper {
+    flex-direction: column;
+  }
+
+  &__header {
+    max-width: 1480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__caption {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: $how-caption-color;
+    text-transform: uppercase;
+  }
+  &__link {
+    padding-left: 43px;
+    width: 331px;
+    height: 52px;
+    display: block;
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1.5px solid $pets-favorite-text-color;
+    border-radius: 100px;
+    line-height: 49px;
+    letter-spacing: 1.8px;
+
+    &::before {
+      content: url(../../assets/icons/choose-heart.svg);
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 5px;
+      left: 19px;
+    }
+  }
+}
 
 
 
