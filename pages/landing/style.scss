@@ -225,7 +225,7 @@
   padding: 35px 0;
   min-width: 1920px;
   width: 100%;
-  height: 926px;
+  max-height: 926px;
 
   .wrapper {
     flex-direction: column;
@@ -239,15 +239,60 @@
     text-transform: uppercase;
   }
   &__list {
+    max-width: 1480px;
+    padding-top: 98px;
     display: flex;
     justify-content: space-between;
   }
   &__item {
-    max-width: 470px;
+    width: 480px;
     height: 200px;
   }
-}
+  &__icon {
+    margin: 0 auto;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: $how-circle-bg-color;
+    position: relative;
 
+    &::before {
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+  &__icon_binocular::before {
+    width: 50px;
+    height: 50px;
+    content: url(../../assets/icons/binoculars-icon.svg);
+  }
+  &__icon_heart::before {
+    content: url(../../assets/icons/heart-icon.svg);
+  }
+  &__icon_hand::before {
+    content: url(../../assets/icons/hand-icon.svg);
+  }
+  &__description {
+    padding: 16px 0 0 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $how-item-text-color;
+    text-align: center;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 523px;
+    position: relative;
+    background: url(../../assets/bg/how_bg.png) center bottom/cover repeat-x;
+    background-size: auto 100%;
+  }
+}
 
 
 
