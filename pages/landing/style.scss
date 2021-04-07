@@ -354,6 +354,7 @@
   max-height: 867px;
 
   .wrapper {
+    position: relative;
     flex-direction: column;
   }
 
@@ -511,5 +512,36 @@
       font-weight: 400;
       color: $cards-item-location-color;
     }
+  }
+  &__arrow {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    opacity: .8;
+    background-color: transparent;
+    background: url(../../assets/icons/slider-arrow-icon.svg) no-repeat;
+
+    &:hover {
+      opacity: 1;
+      transition: .3s;
+    }
+  }
+  &__arrow_left {
+    top: 50%;
+    right: 119px;
+    transform: translateY(7px);
+  }
+  &__arrow_right {
+    top: 50%;
+    right: 119px;
+    transform: rotate(180deg) translateY(-59px);
+  }
+  &__icon-pengi {
+    width: 33px;
+    height: 66px;
+    position: absolute;
+    bottom: 13px;
+    right: 128px;
+    background: url(../../assets/icons/pengi.svg) no-repeat;
   }
 }

@@ -464,6 +464,7 @@ ul {
 }
 
 .pets .wrapper {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -663,5 +664,43 @@ ul {
   font-size: 16px;
   font-weight: 400;
   color: #909090;
+}
+
+.pets__arrow {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  opacity: .8;
+  background-color: transparent;
+  background: url(../../assets/icons/slider-arrow-icon.svg) no-repeat;
+}
+
+.pets__arrow:hover {
+  opacity: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.pets__arrow_left {
+  top: 50%;
+  right: 119px;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+.pets__arrow_right {
+  top: 50%;
+  right: 119px;
+  -webkit-transform: rotate(180deg) translateY(-59px);
+          transform: rotate(180deg) translateY(-59px);
+}
+
+.pets__icon-pengi {
+  width: 33px;
+  height: 66px;
+  position: absolute;
+  bottom: 13px;
+  right: 128px;
+  background: url(../../assets/icons/pengi.svg) no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
