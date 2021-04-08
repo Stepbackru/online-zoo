@@ -658,3 +658,135 @@
     background: url(../../assets/icons/bamboo.svg) center center/cover no-repeat;
   }
 }
+
+.testimonials {
+  margin-top: 100px;
+  min-width: 1920px;
+  width: 100%;
+  height: 364px;
+
+  .wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 1480px;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__caption {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: $testi-caption-color;
+    text-transform: uppercase;
+  }
+  &__button {
+    padding-left: 47px;
+    width: 255px;
+    height: 52px;
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $testi-button-color;
+    background: transparent;
+    border: 1.5px solid $testi-button-color;
+    border-radius: 100px;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+      transition: .3s;
+    }
+
+    &::before {
+      content: url(../../assets/icons/testi-button-icon.svg);
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 12px;
+      left: 18px;
+    }
+  }
+  &__list {
+    padding-top: 52px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 480px;
+    height: 259px;
+  }
+  &__cloud {
+    padding: 28px 45px;
+    width: 100%;
+    height: 172px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    background: $testi-item-bg-color;
+    box-shadow: 0px 2px 30px $testi-item-shadow;
+    border-radius: 10px;
+
+    .triangle {
+      position: relative;
+      bottom: -73px;
+      left: 36px;
+      background: $testi-item-bg-color;
+      transform: skewX(-30deg) scale(1, .866);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+      }
+      &::before {
+        transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+      }
+      &::after {
+        transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+      }
+    }
+    .triangle,
+    .triangle:before,
+    .triangle:after {
+      width: 20px;
+      height: 20px;
+      border-top-right-radius: 50%;
+    }
+  }
+  &__date {
+    font-size: 14px;
+    font-weight: 400;
+    color: $testi-date-color;
+  }
+  &__text,
+  &__name {
+    padding-top: 8px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: $testi-text-color;
+  }
+  &__author {
+    padding: 18px;
+    display: flex;
+    align-items: center;
+  }
+  &__photo {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+  }
+  &__name {
+    padding: 0 17px;
+    color: $testi-name-color;
+  }
+}
