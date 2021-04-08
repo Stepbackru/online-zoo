@@ -527,7 +527,16 @@ ul {
   transition: .3s;
 }
 
-.pets .cards {
+.pets__icon-pengi {
+  width: 33px;
+  height: 66px;
+  position: absolute;
+  bottom: 13px;
+  right: 128px;
+  background: url(../../assets/icons/pengi.svg) no-repeat;
+}
+
+.cards {
   max-width: 1480px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -543,7 +552,7 @@ ul {
   gap: 20px;
 }
 
-.pets .cards__item {
+.cards__item {
   width: 480px;
   height: 364px;
   background: #ffffff;
@@ -552,33 +561,33 @@ ul {
   border-radius: 10px;
 }
 
-.pets .cards__link {
+.cards__link {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.pets .cards__link:hover .cards__pic_panda,
-.pets .cards__link:hover .cards__pic_eagle,
-.pets .cards__link:hover .cards__pic_gorilla,
-.pets .cards__link:hover .cards__pic_aligator,
-.pets .cards__link:hover .cards__pic_elephant,
-.pets .cards__link:hover .cards__pic_lemur {
+.cards__link:hover .cards__pic_panda,
+.cards__link:hover .cards__pic_eagle,
+.cards__link:hover .cards__pic_gorilla,
+.cards__link:hover .cards__pic_aligator,
+.cards__link:hover .cards__pic_elephant,
+.cards__link:hover .cards__pic_lemur {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.pets .cards__link:hover .cards__image_panda::before,
-.pets .cards__link:hover .cards__image_eagle::before,
-.pets .cards__link:hover .cards__image_gorilla::before,
-.pets .cards__link:hover .cards__image_aligator::before,
-.pets .cards__link:hover .cards__image_elephant::before,
-.pets .cards__link:hover .cards__image_lemur::before {
+.cards__link:hover .cards__image_panda::before,
+.cards__link:hover .cards__image_eagle::before,
+.cards__link:hover .cards__image_gorilla::before,
+.cards__link:hover .cards__image_aligator::before,
+.cards__link:hover .cards__image_elephant::before,
+.cards__link:hover .cards__image_lemur::before {
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
 }
 
-.pets .cards__pic {
+.cards__pic {
   margin: 20px auto 31px;
   width: 229px;
   height: 221px;
@@ -591,7 +600,7 @@ ul {
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.pets .cards__image {
+.cards__image {
   content: "";
   position: absolute;
   top: -10px;
@@ -600,7 +609,7 @@ ul {
   bottom: -10px;
 }
 
-.pets .cards__image::before {
+.cards__image::before {
   content: "";
   position: absolute;
   top: 0;
@@ -613,38 +622,38 @@ ul {
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.pets .cards__image_panda::before {
+.cards__image_panda::before {
   background: url(../../assets/images/panda.jpg) center/cover;
 }
 
-.pets .cards__image_eagle::before {
+.cards__image_eagle::before {
   background: url(../../assets/images/eagle.jpg) center/cover;
 }
 
-.pets .cards__image_gorilla::before {
+.cards__image_gorilla::before {
   background: url(../../assets/images/gorilla.jpg) center/cover;
 }
 
-.pets .cards__image_aligator::before {
+.cards__image_aligator::before {
   background: url(../../assets/images/crocodile.jpg) center/cover;
 }
 
-.pets .cards__image_elephant::before {
+.cards__image_elephant::before {
   background: url(../../assets/images/elephant.jpg) center/cover;
 }
 
-.pets .cards__image_lemur::before {
+.cards__image_lemur::before {
   background: url(../../assets/images/lemur.jpg) center/cover;
 }
 
-.pets .cards__content {
+.cards__content {
   padding: 16px 31px;
   position: relative;
   font-family: 'Roboto', sans-serif;
   border-top: 1px solid #e5eaeb;
 }
 
-.pets .cards__content::after {
+.cards__content::after {
   content: url(../../assets/icons/tv-icon.svg);
   width: 32px;
   height: 32px;
@@ -653,20 +662,20 @@ ul {
   right: 29px;
 }
 
-.pets .cards__name {
+.cards__name {
   padding-bottom: 6px;
   font-size: 24px;
   font-weight: 500;
   color: #2d2d2d;
 }
 
-.pets .cards__location {
+.cards__location {
   font-size: 16px;
   font-weight: 400;
   color: #909090;
 }
 
-.pets__arrow {
+.cards__arrow {
   width: 52px;
   height: 52px;
   position: absolute;
@@ -675,33 +684,24 @@ ul {
   background: url(../../assets/icons/slider-arrow-icon.svg) no-repeat;
 }
 
-.pets__arrow:hover {
+.cards__arrow:hover {
   opacity: 1;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-.pets__arrow_left {
-  top: 50%;
-  right: 119px;
-  -webkit-transform: translateY(7px);
-          transform: translateY(7px);
-}
-
-.pets__arrow_right {
+.cards__arrow_left {
   top: 50%;
   right: 119px;
   -webkit-transform: rotate(180deg) translateY(-59px);
           transform: rotate(180deg) translateY(-59px);
 }
 
-.pets__icon-pengi {
-  width: 33px;
-  height: 66px;
-  position: absolute;
-  bottom: 13px;
-  right: 128px;
-  background: url(../../assets/icons/pengi.svg) no-repeat;
+.cards__arrow_right {
+  top: 50%;
+  right: 119px;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
 }
 
 .pay {
@@ -1007,5 +1007,88 @@ ul {
 .testimonials__name {
   padding: 0 17px;
   color: #000000;
+}
+
+.look {
+  margin-top: 99px;
+  min-width: 1920px;
+  width: 100%;
+  height: 210px;
+}
+
+.look .wrapper {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.look__caption {
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0d444d;
+  text-transform: uppercase;
+}
+
+.look .cards {
+  padding-top: 67px;
+  max-width: 1335px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 0;
+}
+
+.look .cards__item {
+  width: 105px;
+  height: 131px;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+}
+
+.look .cards__pic {
+  margin: 0;
+  width: 76px;
+  height: 73px;
+}
+
+.look .cards__name {
+  padding: 7px 33px 0 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.look .cards__arrow {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  opacity: .8;
+  background-color: transparent;
+  background: url(../../assets/icons/slider-arrow-icon.svg) no-repeat;
+}
+
+.look .cards__arrow:hover {
+  opacity: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.look .cards__arrow_left {
+  top: 85px;
+  right: 268px;
+}
+
+.look .cards__arrow_right {
+  top: 92px;
+  right: 268px;
+  -webkit-transform: none;
+          transform: none;
 }
 /*# sourceMappingURL=style.css.map */

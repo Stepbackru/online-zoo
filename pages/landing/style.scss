@@ -403,116 +403,126 @@
       transition: .3s;
     }
   }
-  .cards {
-    max-width: 1480px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  &__icon-pengi {
+    width: 33px;
+    height: 66px;
+    position: absolute;
+    bottom: 13px;
+    right: 128px;
+    background: url(../../assets/icons/pengi.svg) no-repeat;
+  }
+}
 
-    &__item {
-      width: 480px;
-      height: 364px;
-      background: $cards-item-bg-color;
-      box-shadow: 0px 2px 30px $cards-item-shadow;
-      border-radius: 10px;
-    }
-    &__link {
-      width: 100%;
-      height: 100%;
-      display: block;
+.cards {
+  max-width: 1480px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 
-      &:hover .cards__pic_panda, 
-      &:hover .cards__pic_eagle, 
-      &:hover .cards__pic_gorilla, 
-      &:hover .cards__pic_aligator, 
-      &:hover .cards__pic_elephant, 
-      &:hover .cards__pic_lemur {
-        transform: rotate(360deg);
-      }
-      &:hover .cards__image_panda::before,
-      &:hover .cards__image_eagle::before,
-      &:hover .cards__image_gorilla::before,
-      &:hover .cards__image_aligator::before,
-      &:hover .cards__image_elephant::before,
-      &:hover .cards__image_lemur::before {
-        transform: rotate(-360deg);
-      }
-    }
-    &__pic {
-      margin: 20px auto 31px;
-      width: 229px;
-      height: 221px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 48% 52% 65% 35% / 43% 46% 54% 57%;
-      transition: transform .5s;
-    }
-    &__image {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
+  &__item {
+    width: 480px;
+    height: 364px;
+    background: $cards-item-bg-color;
+    box-shadow: 0px 2px 30px $cards-item-shadow;
+    border-radius: 10px;
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: block;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transition: transform .5s;
-      }
+    &:hover .cards__pic_panda, 
+    &:hover .cards__pic_eagle, 
+    &:hover .cards__pic_gorilla, 
+    &:hover .cards__pic_aligator, 
+    &:hover .cards__pic_elephant, 
+    &:hover .cards__pic_lemur {
+      transform: rotate(360deg);
     }
-    &__image_panda::before {
-      background: url(../../assets/images/panda.jpg) center / cover;
-    }
-    &__image_eagle::before {
-      background: url(../../assets/images/eagle.jpg) center / cover;
-    }
-    &__image_gorilla::before {
-      background: url(../../assets/images/gorilla.jpg) center / cover;
-    }
-    &__image_aligator::before {
-      background: url(../../assets/images/crocodile.jpg) center / cover;
-    }
-    &__image_elephant::before {
-      background: url(../../assets/images/elephant.jpg) center / cover;
-    }
-    &__image_lemur::before {
-      background: url(../../assets/images/lemur.jpg) center / cover;
-    }
-    
-    &__content {
-      padding: 16px 31px;
-      position: relative;
-      font-family: 'Roboto', sans-serif;
-      border-top: 1px solid $cards-item-border-color;
-
-      &::after {
-        content: url(../../assets/icons/tv-icon.svg);
-        width: 32px;
-        height: 32px;
-        position: absolute;
-        top: 29px;
-        right: 29px;
-      }
-    }
-    &__name {
-      padding-bottom: 6px;
-      font-size: 24px;
-      font-weight: 500;
-      color: $cards-item-name-color;
-    }
-    &__location {
-      font-size: 16px;
-      font-weight: 400;
-      color: $cards-item-location-color;
+    &:hover .cards__image_panda::before,
+    &:hover .cards__image_eagle::before,
+    &:hover .cards__image_gorilla::before,
+    &:hover .cards__image_aligator::before,
+    &:hover .cards__image_elephant::before,
+    &:hover .cards__image_lemur::before {
+      transform: rotate(-360deg);
     }
   }
+  &__pic {
+    margin: 20px auto 31px;
+    width: 229px;
+    height: 221px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 48% 52% 65% 35% / 43% 46% 54% 57%;
+    transition: transform .5s;
+  }
+  &__image {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: transform .5s;
+    }
+  }
+  &__image_panda::before {
+    background: url(../../assets/images/panda.jpg) center / cover;
+  }
+  &__image_eagle::before {
+    background: url(../../assets/images/eagle.jpg) center / cover;
+  }
+  &__image_gorilla::before {
+    background: url(../../assets/images/gorilla.jpg) center / cover;
+  }
+  &__image_aligator::before {
+    background: url(../../assets/images/crocodile.jpg) center / cover;
+  }
+  &__image_elephant::before {
+    background: url(../../assets/images/elephant.jpg) center / cover;
+  }
+  &__image_lemur::before {
+    background: url(../../assets/images/lemur.jpg) center / cover;
+  }
+  
+  &__content {
+    padding: 16px 31px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    border-top: 1px solid $cards-item-border-color;
+
+    &::after {
+      content: url(../../assets/icons/tv-icon.svg);
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 29px;
+      right: 29px;
+    }
+  }
+  &__name {
+    padding-bottom: 6px;
+    font-size: 24px;
+    font-weight: 500;
+    color: $cards-item-name-color;
+  }
+  &__location {
+    font-size: 16px;
+    font-weight: 400;
+    color: $cards-item-location-color;
+  }
+  
   &__arrow {
     width: 52px;
     height: 52px;
@@ -529,20 +539,12 @@
   &__arrow_left {
     top: 50%;
     right: 119px;
-    transform: translateY(7px);
+    transform: rotate(180deg) translateY(-59px);
   }
   &__arrow_right {
     top: 50%;
     right: 119px;
-    transform: rotate(180deg) translateY(-59px);
-  }
-  &__icon-pengi {
-    width: 33px;
-    height: 66px;
-    position: absolute;
-    bottom: 13px;
-    right: 128px;
-    background: url(../../assets/icons/pengi.svg) no-repeat;
+    transform: translateY(7px);
   }
 }
 
@@ -788,5 +790,75 @@
   &__name {
     padding: 0 17px;
     color: $testi-name-color;
+  }
+}
+
+.look {
+  margin-top: 99px;
+  min-width: 1920px;
+  width: 100%;
+  height: 210px;
+  
+  .wrapper {
+    position: relative;
+    flex-direction: column;
+  }
+
+  &__caption {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: $look-caption-color;
+    text-transform: uppercase;
+  }
+  .cards {
+    padding-top: 67px;
+    max-width: 1335px;
+    flex-wrap: nowrap;
+    gap: 0;
+
+    &__item {
+      width: 105px;
+      height: 131px;
+      background: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    &__pic {
+      margin: 0;
+      width: 76px;
+      height: 73px;
+    }
+    &__name {
+      padding: 7px 33px 0 0;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      font-weight: 500;
+      color: $cards-item-name-color;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &__arrow {
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      opacity: .8;
+      background-color: transparent;
+      background: url(../../assets/icons/slider-arrow-icon.svg) no-repeat;
+  
+      &:hover {
+        opacity: 1;
+        transition: .3s;
+      }
+    }
+    &__arrow_left {
+      top: 85px;
+      right: 268px;
+    }
+    &__arrow_right {
+      top: 92px;
+      right: 268px;
+      transform: none;
+    }
   }
 }
