@@ -182,6 +182,7 @@ ul {
 }
 
 .menu__link_active {
+  pointer-events: none;
   color: #ffffff;
   border-bottom: 2px solid #c5e1e6;
 }

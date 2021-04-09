@@ -111,6 +111,7 @@
     }
   }
   &__link_active {
+    pointer-events: none;
     color: $hover-color;
     border-bottom: 2px solid $border-color;
     
