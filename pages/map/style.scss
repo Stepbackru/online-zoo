@@ -120,3 +120,212 @@
     }
   }
 }
+
+.country_hover {
+  fill: #0d444d;
+}
+
+.map {
+  width: 100%;
+  min-width: 1920px;
+  height: 1040px;
+  position: relative;
+  top: 110px;
+  background: $main-bg-color;
+
+  .wrapper {
+    position: relative;
+  }
+
+  &__caption {
+    padding: 26px 0 53px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: $map-caption-color;
+    text-transform: uppercase;
+  }
+  &__bg {
+    margin: 0 auto;
+    width: 1438px;
+    height: 912px;
+  }
+  &__link {
+    margin: 25px auto 0;
+    width: 90px;
+    height: 90px;
+    display: block;
+
+    &:hover ~ .map__tooltip {
+      opacity: 1;
+      transition: .5s;
+      z-index: 20;
+    }
+    &:hover .map__pic_panda, 
+    &:hover .map__pic_eagle, 
+    &:hover .map__pic_gorilla, 
+    &:hover .map__pic_aligator {
+      transform: rotate(360deg);
+    }
+    &:hover .map__image_panda::before,
+    &:hover .map__image_eagle::before,
+    &:hover .map__image_gorilla::before,
+    &:hover .map__image_aligator::before {
+      transform: rotate(-360deg);
+    }
+  }
+  &__pic {
+    width: 91px;
+    height: 91px;
+    position: relative;
+    overflow: hidden;
+    border: 10px solid $map-icons-border-color;
+    border-radius: 48% 52% 65% 35% / 43% 46% 54% 57%;
+    background: $map-icons-bg-color;
+    box-shadow: 0px 4px 10px $map-icons-shadow-color;
+    transition: transform .5s;
+
+    &:hover {
+      border: 10px solid $map-icons-border-active-color;
+    }
+  }
+  &__image {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: transform .5s;
+    }
+  }
+  &__image_eagle::before {
+    background: url(../../assets/images/eagle.jpg) center / cover;
+  }
+  &__image_gorilla::before {
+    background: url(../../assets/images/gorilla.jpg) center / cover;
+  }
+  &__image_aligator::before {
+    background: url(../../assets/images/crocodile.jpg) center / cover;
+    background-position-x: left;
+  }
+  &__image_panda::before {
+    background: url(../../assets/images/panda.jpg) center / cover;
+  }
+
+  &__size {
+    width: 79px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 980px;
+    right: 104px;
+  }
+  &__zoom_in,
+  &__zoom_out {
+    width: 32px;
+    height: 32px;
+    background: $map-size-btn-bg;
+    border: 1.5px solid $map-size-btn-border;
+    border-radius: 50%;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: .3s;
+    }
+  }
+  &__zoom_in {
+    background-image: url(../../assets/icons/zoomin-icon.svg);
+    background-size: 100%;
+  }
+  &__zoom_out {
+    background-image: url(../../assets/icons/zoomout-icon.svg);
+    background-size: contain;
+  }
+  
+  &__eagle,
+  &__aligator,
+  &__gorilla,
+  &__panda {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+  }
+  &__eagle {
+    top: 336px;
+    left: 238px;
+    z-index: 10;
+  }
+  &__aligator {
+    top: 407px;
+    left: 394px;
+  }
+  &__gorilla {
+    top: 507px;
+    left: 757px;
+  }
+  &__panda {
+    top: 374px;
+    right: 410px;
+  }
+  &__tooltip {
+    width: 410px;
+    height: 107px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: $map-tootip-bg;
+    box-shadow: 0px 2px 30px $map-tootip-shadow-color;
+    border-radius: 10px;
+    opacity: 0;
+
+    
+    .triangle {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      background: $testi-item-bg-color;
+      transform: skewX(-30deg) scale(1, .866);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+      }
+      &::before {
+        transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+      }
+      &::after {
+        transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+      }
+    }
+    .triangle,
+    .triangle:before,
+    .triangle:after {
+      width: 20px;
+      height: 20px;
+      border-top-right-radius: 50%;
+    }
+  }
+  &__name,
+  &__location {
+    padding: 4px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $map-tootip-text-color;
+    letter-spacing: 0.7px;
+  }
+}
