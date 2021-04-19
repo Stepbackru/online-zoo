@@ -125,13 +125,12 @@
 .main {
   min-width: 1920px;
   width: 100%;
-  height: 1200px;
   position: relative;
   top: 110px;
-  
-  // .wrapper {
-  //   height: 100%;
-  // }
+
+  .wrapper {
+    gap: 51px;
+  }
 
   .side-bar {
     margin-top: 40px;
@@ -222,6 +221,33 @@
     }
     &__image_panda::before {
       background: url(../../../assets/images/panda.jpg) center / cover;
+    }
+  }
+
+  .animal {
+    padding-top: 50px;
+    width: 1325px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__caption {
+      font-family: 'Rubik', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: $animal-caption-color;
+      text-transform: uppercase;
+    }
+    &__buttons {
+      width: 129px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__button {
+      background: none;
+      border-radius: 50%;
     }
   }
 }
