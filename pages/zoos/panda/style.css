@@ -330,7 +330,7 @@ ul {
 
 .main .animal {
   padding-top: 50px;
-  width: 1325px;
+  width: 1324px;
 }
 
 .main .animal__header {
@@ -366,5 +366,101 @@ ul {
 .main .animal__button {
   background: none;
   border-radius: 50%;
+}
+
+.main .animal .animal-main {
+  padding-top: 23px;
+}
+
+.main .animal .animal-main__caption {
+  padding: 0 0 7px 2px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #0d444d;
+}
+
+.main .animal .animal-main__stream {
+  width: 100%;
+  height: 604px;
+  border-radius: 18px;
+}
+
+.main .animal .animal-side {
+  padding-top: 52px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .animal .animal-side__caption {
+  width: 100%;
+  padding: 0 0 7px 2px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #0d444d;
+}
+
+.main .animal .animal-side__arrows {
+  padding-left: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .animal .animal-side__arrow {
+  width: 52px;
+  height: 52px;
+  display: block;
+  opacity: .8;
+  background-color: transparent;
+  background: url(../../../assets/icons/slider-arrow-icon.svg) no-repeat;
+}
+
+.main .animal .animal-side__arrow:hover {
+  opacity: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main .animal .animal-side__arrow_left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main .animal-slider {
+  width: 1204px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .animal-slider__item {
+  width: 380px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.main .animal-slider__stream {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
