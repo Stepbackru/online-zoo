@@ -277,12 +277,6 @@ ul {
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.main .side-bar__pic:hover {
-  width: 105px;
-  height: 105px;
-  border: 15px solid #0a5d69;
-}
-
 .main .side-bar__pic_active {
   width: 105px;
   height: 105px;
