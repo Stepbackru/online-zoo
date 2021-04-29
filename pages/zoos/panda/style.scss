@@ -318,12 +318,13 @@
   }
 
   .information {
-    padding: 47px 156px 0;
+    width: 1274px;
+    margin: 47px 0 0 156px;
     display: flex;
 
     .info,
     .facts {
-      max-width: 604px;
+      width: 604px;
       font-family: 'Roboto', sans-serif;
       font-size: 14px;
       font-weight: 400;
@@ -334,6 +335,62 @@
         font-size: 24px;
         text-transform: uppercase;
         font-weight: 400;
+      }
+    }
+    .info {
+      height: 480px;
+      margin-right: 72px;
+
+      &__list {
+        padding-top: 25px;
+        height: 100%;
+      }
+      &__item {
+        height: 53px;
+
+        &:not(:first-child) {
+          margin-top: 30px;
+        }
+        &:last-child {
+          width: 85%;
+          height: 65px;
+          line-height: 20px;
+        }
+      }
+      &__subcaption {
+        font-size: 16px;
+      }
+      &__description {
+        display: block;
+        padding-top: 8px;
+
+        &[href] {
+          text-decoration: underline;
+        }
+      }
+    }
+    .facts {
+
+      &__list {
+        padding: 26px 0 0 23px;
+      }
+      &__item {
+        position: relative;
+        &::before {
+          content: url(../../../assets/icons/facts_icon.svg);
+          position: absolute;
+          top: 0;
+          left: -23px;
+        }
+
+        &:not(:first-child) {
+          padding-top: 26px;
+
+          &::before {
+            top: 22px;
+            left: -23px;
+          }
+        }
       }
     }
   }

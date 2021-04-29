@@ -461,7 +461,8 @@ ul {
 }
 
 .main .information {
-  padding: 47px 156px 0;
+  width: 1274px;
+  margin: 47px 0 0 156px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -469,7 +470,7 @@ ul {
 
 .main .information .info,
 .main .information .facts {
-  max-width: 604px;
+  width: 604px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -482,5 +483,66 @@ ul {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+.main .information .info {
+  height: 480px;
+  margin-right: 72px;
+}
+
+.main .information .info__list {
+  padding-top: 25px;
+  height: 100%;
+}
+
+.main .information .info__item {
+  height: 53px;
+}
+
+.main .information .info__item:not(:first-child) {
+  margin-top: 30px;
+}
+
+.main .information .info__item:last-child {
+  width: 85%;
+  height: 65px;
+  line-height: 20px;
+}
+
+.main .information .info__subcaption {
+  font-size: 16px;
+}
+
+.main .information .info__description {
+  display: block;
+  padding-top: 8px;
+}
+
+.main .information .info__description[href] {
+  text-decoration: underline;
+}
+
+.main .information .facts__list {
+  padding: 26px 0 0 23px;
+}
+
+.main .information .facts__item {
+  position: relative;
+}
+
+.main .information .facts__item::before {
+  content: url(../../../assets/icons/facts_icon.svg);
+  position: absolute;
+  top: 0;
+  left: -23px;
+}
+
+.main .information .facts__item:not(:first-child) {
+  padding-top: 26px;
+}
+
+.main .information .facts__item:not(:first-child)::before {
+  top: 22px;
+  left: -23px;
 }
 /*# sourceMappingURL=style.css.map */
